@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta value="" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/power.ico" type="image/x-icon" />
+    <title>Weather Project</title>
+    <!-- fontawosome link -->
+
+    <!-- css link -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body onload="init()">
+    //main section
+    <main>
+      //welcomScreen section
+      <div id="welcomScreen">
+        <h2></h2>
+        <img class="image" src="about-us.png" alt="logo" />
+        //eventSection section
+        <section class="eventSection">
+          <!-- <p>Select The Difficulty</p> -->
+          <p>Welcom To Rendom Num Guess Game</p>
+          //button button_wrapper section
+          <div class="button_wrapper">
+            <button onclick="easyMode()">Easy : 10 Attempts</button>
+            <button onclick="hardMode()">Hard : 5 Attempts</button>
+          </div>
+        </section>
+      </div>
+      <!-- our acual game area -->
+      <div id="gameArea">
+        <div id="newGameButton">
+          <button onclick="gamereloade()">Play Again</button>
+        </div>
+        <section>
+          <h3 id="userNumberUpdata">Your Guess (1 - 100 )</h3>
+          <input
+            type="number"
+            id="inputBox"
+            min="1"
+            max="100"
+            placeholder="Enter Your Number"
+            onchange="campareGuess()"
+          />
+        </section>
+
+        //content text section
+        <section class="stats">
+          <div class="info">
+            <p>Number of Previous Attempts</p>
+            <span id="attempts">0</span>
+          </div>
+          <div class="info">
+            <p>Number of Previous Guesses</p>
+            <span id="guesses">0</span>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- js link -->
+    <script src="index.js"></script>
+  </body>
+</html>
